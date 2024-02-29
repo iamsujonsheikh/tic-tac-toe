@@ -101,22 +101,26 @@ const Game = () => {
 
   return (
     <>
-      <h1 className="text-center text-3xl font-bold text-pink-400">
-        Wellcome To tic Tac Toe World 🎉
-      </h1>
-      <div className="sm:flex my-6 sm:my-0 justify-center p-4">
-        <div className="border rounded bg-cyan-100 sm:mr-10 p-6 shadow">
-          <Board
-            xIsNext={xIsNext}
-            squares={currentSquare}
-            onPlay={handlePlay}
-          />
-        </div>
+      <main className="bg-slate-200 flex mx-auto justify-center items-center h-screen">
+        <div>
+          <h1 className="text-center text-3xl font-bold text-pink-400">
+            Wellcome To tic Tac Toe World 🎉
+          </h1>
+          <div className="sm:flex my-6 sm:my-0 justify-center p-4">
+            <div className="border rounded bg-cyan-100 sm:mr-10 p-6 shadow">
+              <Board
+                xIsNext={xIsNext}
+                squares={currentSquare}
+                onPlay={handlePlay}
+              />
+            </div>
 
-        <div className="border rounded p-4">
-          <ol>{move}</ol>
+            <div className="border rounded p-4">
+              <ol>{move}</ol>
+            </div>
+          </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };
